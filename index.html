@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>ShotThemAll by Me</title>
+</head>
+
+<body>
+   <div id="intro">
+      <div id="intro__inner">
+         <p>Удачной охоты!</p>
+         <p> Введите ваше имя: </p>
+         <input id="name" type="text" value="player">
+         <button id="button_play">Играть!</button>
+         <button id="button_settings">Настройки</button>
+         <button id="button_instruction">Инструкция</button>
+      </div>
+   </div>
+   <div id="settings">
+      <div id="settings__inner">
+         <p>Настройки</p>
+         <p>Введите время игры: </p>
+         <input id="time_game" type="text" value="60">
+         <p>Сложность игры: </p>
+         <input type="range" id="game_difficulty" name="difficulty" min="20" max="100" step="20" value="20">
+         <p>Громкость</p>
+         <input type="range" id="volume_sound" name="volume" min="0" max="1" step="0.1">
+         <button id="button_back_set">Меню</button>
+      </div>
+   </div>
+   <div id="instruction">
+      <div>
+         <p>Инструкция</p>
+         <ul>
+            <li>Управление:</li>
+            <li>Левая кнопка мыши &mdash; выстрел из винтовки;</li>
+            <li>Правая кнопка мыши &mdash; выстрел из дробовика (очки указываются в скобках);</li>
+            <li>Подсказки:</li>
+            <li>От выбранной сложности зависит скорость появления целей, их скорости перемещения, а также меняется
+               коэффициент для подсчета очков;</li>
+            <li>Дробовиком лучше попадать, но у него заканчиваются
+               патроны и зарабатывается вдвое меньше очков и бонусов (кроме птичек - за них очки добавляются одинаково);
+            </li>
+            <li>Чтобы пополнить патроны дробовика: когда останется 2 патрона появится дым из дымохода, надо стрельнуть в
+               него (заработается 4(2) очка), тогда выбежит вор, его необходимо подстрелить, тогда добавится 5(3)
+               патронов и 4(2) очка;</li>
+            <li>Если сбить часы, то добавится 10(5) секунд и 10(5) очков;</li>
+            <li>Если сбить бомбу, то собьется 8(4) птичек и добавится 8(4) очков;</li>
+            <li>Если не сбить бомбу, то когда она упадет собьются все птички, но отнимется 1 жизнь и очки не добавятся;
+            </li>
+            <li>За каждую упущенную птичку &mdash; отнимется 1 жизнь;</li>
+         </ul>
+         <div>
+            <button id="button_back_instr">Меню</button>
+         </div>
+      </div>
+   </div>
+
+   <canvas id='canvas'></canvas>
+
+   <div id="points">
+      <div id="points__inner">
+         <p>Результаты</p>
+         <p>Лучший результат: <span id="best_result"></span></p>
+         <div>
+            <ul id="list_point"></ul>
+         </div>
+         <button id="button_repeat">Повторим!</button>
+         <button id="button_back_reset">Сбросить</button>
+      </div>
+   </div>
+
+   <script src="js/app.js"></script>
+</body>
+
+</html>

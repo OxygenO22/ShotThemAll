@@ -1,0 +1,242 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   position: relative;
+
+   #intro,
+   #settings,
+   #instruction,
+   #points {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+   }
+
+   #intro {
+      display: flex;
+      background: url("img/intro2.jpg");
+      background-size: cover;
+      #intro__inner {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         background-color: rgba(0red, 0, 0, 0.3);
+         width: 100%;
+         padding: 30px;
+         p {
+            font-size: 25px;
+            color: #fff;
+            margin-bottom: 10px;
+            &:nth-child(1) {
+               font-size: 35px;
+               text-align: center;
+               margin-bottom: 20px;
+            }
+         }
+         input {
+            font-size: 25px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            text-align: center;
+            background: linear-gradient(90deg, rgb(234, 250, 4), rgb(255, 187, 0));
+            &:focus {
+               border-color: rgb(255, 230, 0);
+               outline: 0;
+               box-shadow: 0px 0px 20px rgb(255, 230, 0);
+            }
+         }
+      }
+   }
+
+   #settings {
+      display: none;
+      background: url("img/settings.jpg");
+      background-size: cover;
+      #settings__inner {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         background-color: rgba(0red, 0, 0, 0.3);
+         width: 100%;
+         padding: 30px;
+         p {
+            font-size: 25px;
+            color: #fff;
+            margin-bottom: 10px;
+            &:nth-child(1) {
+               font-size: 35px;
+               text-align: center;
+               margin-bottom: 20px;
+            }
+         }
+         input {
+            font-size: 25px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            text-align: center;
+            background: linear-gradient(90deg, rgb(147, 153, 68), rgb(18, 83, 1));
+            &:focus {
+               border-color: rgb(113, 250, 2);
+               outline: 0;
+               box-shadow: 0px 0px 20px rgb(113, 250, 2);
+            }
+         }
+         button {
+            background: linear-gradient(45deg, rgb(81, 122, 33), rgb(78, 78, 9));
+            box-shadow: 2px 5px 15px rgb(83, 167, 4);
+            &:hover {
+               box-shadow: 5px 10px 15px rgb(113, 250, 2);
+            }
+         }
+      }
+   }
+   #instruction {
+      display: none;
+      background: url("img/instruction.jpg");
+      background-size: cover;
+      div {
+         background-color: rgba(0, 0, 0, 0.3);
+         padding: 20px 10px;
+         p {
+            font-size: 35px;
+            color: #fff;
+            list-style: none;
+            text-align: center;
+            margin-bottom: 20px;
+         }
+         ul {
+            padding: 30px 30px 30px 390px;
+            max-height: 50vh;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            &::-webkit-scrollbar {
+               width: 10px;
+               background-color: rgba(252, 206, 5, 0.3);
+               border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+               border-radius: 10px;
+               background: linear-gradient(45deg, rgb(115, 143, 219), rgb(170, 140, 5), rgb(115, 143, 219));
+            }
+            &::-webkit-scrollbar-track {
+               box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+               border-radius: 10px;
+            }
+            li {
+               list-style: circle;
+               font-size: 25px;
+               color: #fff;
+               &:nth-child(1),
+               &:nth-child(4) {
+                  list-style: none;
+                  text-align: center;
+                  margin-top: 15px;
+                  margin-bottom: 15px;
+               }
+            }
+         }
+         div {
+            text-align: center;
+            background-color: transparent;
+            button {
+               background: linear-gradient(45deg, rgb(170, 140, 5), rgb(10, 63, 207));
+               box-shadow: 2px 5px 15px rgb(4, 167, 159);
+               &:hover {
+                  box-shadow: 5px 10px 15px rgb(2, 213, 250);
+               }
+            }
+         }
+      }
+   }
+
+   canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      cursor: none;
+   }
+
+   #points {
+      display: none;
+      background: url("img/ontro2.jpg");
+      background-size: cover;
+      #points__inner {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         background-color: rgba(0, 0, 0, 0.3);
+         width: 100%;
+         padding: 30px;
+         p {
+            font-size: 35px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            &:nth-child(2) {
+               color: rgb(255, 166, 0);
+            }
+         }
+         div {
+            height: 250px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            &::-webkit-scrollbar {
+               width: 10px;
+               background-color: rgba(231, 153, 6, 0.3);
+               border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+               border-radius: 10px;
+               background: linear-gradient(45deg, rgb(30, 40, 179), rgb(170, 140, 5), rgb(30, 40, 179));
+            }
+            &::-webkit-scrollbar-track {
+               box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+               border-radius: 10px;
+            }
+            ul {
+               text-align: center;
+               li {
+                  list-style: none;
+                  font-size: 25px;
+                  color: #fff;
+                  margin-bottom: 5px;
+                  padding: 5px 10px;
+               }
+            }
+         }
+         button {
+            background: linear-gradient(45deg, rgb(30, 40, 179), rgb(250, 172, 4));
+            box-shadow: 2px 5px 15px rgb(231, 153, 6);
+            &:hover {
+               box-shadow: 5px 10px 15px rgb(251, 255, 1);
+            }
+         }
+      }
+   }
+
+   button {
+      font-size: 25px;
+      border-radius: 20px;
+      background: linear-gradient(45deg, rgb(255, 187, 0), #ff0);
+      min-width: 320px;
+      height: 70px;
+      margin-bottom: 20px;
+      box-shadow: 2px 5px 15px rgb(0, 0, 0);
+      transition: 0.5s;
+      &:hover {
+         box-shadow: 5px 10px 15px rgb(0, 0, 0);
+      }
+   }
+}

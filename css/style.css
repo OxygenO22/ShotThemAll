@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+body #intro,
+body #settings,
+body #instruction,
+body #points {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+body #intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url("img/intro2.jpg");
+  background-size: cover;
+}
+
+body #intro #intro__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 30px;
+}
+
+body #intro #intro__inner p {
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+body #intro #intro__inner p:nth-child(1) {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body #intro #intro__inner input {
+  font-size: 25px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(#eafa04), to(#ffbb00));
+  background: linear-gradient(90deg, #eafa04, #ffbb00);
+}
+
+body #intro #intro__inner input:focus {
+  border-color: #ffe600;
+  outline: 0;
+  -webkit-box-shadow: 0px 0px 20px #ffe600;
+          box-shadow: 0px 0px 20px #ffe600;
+}
+
+body #settings {
+  display: none;
+  background: url("img/settings.jpg");
+  background-size: cover;
+}
+
+body #settings #settings__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 30px;
+}
+
+body #settings #settings__inner p {
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+body #settings #settings__inner p:nth-child(1) {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body #settings #settings__inner input {
+  font-size: 25px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(#939944), to(#125301));
+  background: linear-gradient(90deg, #939944, #125301);
+}
+
+body #settings #settings__inner input:focus {
+  border-color: #71fa02;
+  outline: 0;
+  -webkit-box-shadow: 0px 0px 20px #71fa02;
+          box-shadow: 0px 0px 20px #71fa02;
+}
+
+body #settings #settings__inner button {
+  background: linear-gradient(45deg, #517a21, #4e4e09);
+  -webkit-box-shadow: 2px 5px 15px #53a704;
+          box-shadow: 2px 5px 15px #53a704;
+}
+
+body #settings #settings__inner button:hover {
+  -webkit-box-shadow: 5px 10px 15px #71fa02;
+          box-shadow: 5px 10px 15px #71fa02;
+}
+
+body #instruction {
+  display: none;
+  background: url("img/instruction.jpg");
+  background-size: cover;
+}
+
+body #instruction div {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px 10px;
+}
+
+body #instruction div p {
+  font-size: 35px;
+  color: #fff;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body #instruction div ul {
+  padding: 30px 30px 30px 390px;
+  max-height: 50vh;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+body #instruction div ul::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(252, 206, 5, 0.3);
+  border-radius: 10px;
+}
+
+body #instruction div ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(45deg, #738fdb, #aa8c05, #738fdb);
+}
+
+body #instruction div ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+body #instruction div ul li {
+  list-style: circle;
+  font-size: 25px;
+  color: #fff;
+}
+
+body #instruction div ul li:nth-child(1), body #instruction div ul li:nth-child(4) {
+  list-style: none;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+body #instruction div div {
+  text-align: center;
+  background-color: transparent;
+}
+
+body #instruction div div button {
+  background: linear-gradient(45deg, #aa8c05, #0a3fcf);
+  -webkit-box-shadow: 2px 5px 15px #04a79f;
+          box-shadow: 2px 5px 15px #04a79f;
+}
+
+body #instruction div div button:hover {
+  -webkit-box-shadow: 5px 10px 15px #02d5fa;
+          box-shadow: 5px 10px 15px #02d5fa;
+}
+
+body canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: none;
+}
+
+body #points {
+  display: none;
+  background: url("img/ontro2.jpg");
+  background-size: cover;
+}
+
+body #points #points__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 30px;
+}
+
+body #points #points__inner p {
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body #points #points__inner p:nth-child(2) {
+  color: #ffa600;
+}
+
+body #points #points__inner div {
+  height: 250px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+body #points #points__inner div::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(231, 153, 6, 0.3);
+  border-radius: 10px;
+}
+
+body #points #points__inner div::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(45deg, #1e28b3, #aa8c05, #1e28b3);
+}
+
+body #points #points__inner div::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+body #points #points__inner div ul {
+  text-align: center;
+}
+
+body #points #points__inner div ul li {
+  list-style: none;
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+}
+
+body #points #points__inner button {
+  background: linear-gradient(45deg, #1e28b3, #faac04);
+  -webkit-box-shadow: 2px 5px 15px #e79906;
+          box-shadow: 2px 5px 15px #e79906;
+}
+
+body #points #points__inner button:hover {
+  -webkit-box-shadow: 5px 10px 15px #fbff01;
+          box-shadow: 5px 10px 15px #fbff01;
+}
+
+body button {
+  font-size: 25px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #ffbb00, #ff0);
+  min-width: 320px;
+  height: 70px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 2px 5px 15px black;
+          box-shadow: 2px 5px 15px black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body button:hover {
+  -webkit-box-shadow: 5px 10px 15px black;
+          box-shadow: 5px 10px 15px black;
+}
