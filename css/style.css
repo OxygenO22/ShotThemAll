@@ -35,7 +35,7 @@ body #intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("img/intro2.jpg");
+  background: url("/img/intro2.jpg");
   background-size: cover;
 }
 
@@ -88,7 +88,7 @@ body #intro #intro__inner input:focus {
 
 body #settings {
   display: none;
-  background: url("img/settings.jpg");
+  background: url("/img/settings.jpg");
   background-size: cover;
 }
 
@@ -152,7 +152,7 @@ body #settings #settings__inner button:hover {
 
 body #instruction {
   display: none;
-  background: url("img/instruction.jpg");
+  background: url("/img/instruction.jpg");
   background-size: cover;
 }
 
@@ -231,7 +231,7 @@ body canvas {
 
 body #points {
   display: none;
-  background: url("img/ontro2.jpg");
+  background: url("/img/ontro2.jpg");
   background-size: cover;
 }
 
