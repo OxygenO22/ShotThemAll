@@ -35,7 +35,7 @@ body #intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("img/intro2.jpg");
+  background: url("/ShotThemAll/public/img/intro2.jpg");
   background-size: cover;
 }
 
