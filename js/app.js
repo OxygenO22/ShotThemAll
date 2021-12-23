@@ -568,10 +568,8 @@ function playGame() {
          if (clock[i].x >= cnv.width + 70) {
             clearTimeout(clockTimeout);
             clockEmerg();
-            clockTimeout = setTimeout(() => {
-               clock.splice(i, 1);
-            }, 5000);
-
+            clock.splice(i, 1);
+            break;
          }
          if (clock[i].y >= cnv.height - 30 || clock[i].y < 0) clock[i].by = -clock[i].by;
       }
